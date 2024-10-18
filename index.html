@@ -5,10 +5,36 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Vite App</title>
+    <title>Popover</title>
   </head>
   <body>
-    <div id="app" class="min-h-screen bg-slate-950"></div>
+    <div
+      id="app"
+      class="min-h-screen bg-slate-950 grid place-content-center text-slate-50"
+    >
+      <div class="w-[95%] md:max-w-[1280px] mx-auto">
+        <div id="my-popover" popover>
+          <div
+            class="size-[300px] bg-green-400 flex items-center justify-center"
+          >
+            <h1 class="text-xl font-semibold">Popover</h1>
+          </div>
+          <button
+            popovertarget="my-popover"
+            popovertargetaction="hide"
+            class="absolute top-3 right-3 bg-slate-50 text-slate-950 px-3 py-1 rounded-sm"
+          >
+            close
+          </button>
+        </div>
+        <button
+          popovertarget="my-popover"
+          class="bg-slate-50 text-slate-950 px-5 py-2 rounded-sm uppercase hover:scale-105 transition-all duration-50"
+        >
+          Open
+        </button>
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
